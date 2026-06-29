@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: my-custom-pv
+spec:
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: my-local-storage
+  hostPath:
+    path: /home/kushal/kub_learning/mini_kub/dbdata 

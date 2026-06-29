@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: postgres-pvc 
+spec:
+  accessModes:
+    - ReadWriteOnce # Matlab ek baar me ek hi node isse data read/write kar sakta hai
+  storageClassName: my-local-storage
+  resources:
+    requests:
+      storage: 1Gi # Hame sirf 1 GB space chahiye local practice ke liye
+    
